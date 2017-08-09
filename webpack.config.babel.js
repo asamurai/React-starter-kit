@@ -1,31 +1,16 @@
-const webpack = require('webpack');
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+import webpack from 'webpack';
+import path from 'path';
+
+import config from './config';
+import webpackEnvConfig from './webpack';
 
 const webpackConfig = {
-  entry: [
-    'react-hot-loader/patch',
-    `webpack-dev-server/client?http://localhost:8080`,
-    'webpack/hot/only-dev-server',
-    './src/index.js'
-  ],
+  entry: webpackEnvConfig.entry,
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'Project',
-      template: path.resolve(__dirname, 'assets/views/index-template.ejs'),
-      filename: 'index.html',
-      minify: {
-        collapseWhitespace: true
-      },
-      hash: true
-    }),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin()
-  ],
+  plugins: webpackEnvConfig.plugins,
   module:{
     rules:[
       {
@@ -52,13 +37,12 @@ const webpackConfig = {
     hot: true,
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
-    port: 8080,
+    port: config.devServer.port,
     open: true,
     openPage: '',
     inline: true,
     stats: 'minimal'
   }
-
 };
 
 module.exports = webpackConfig;
