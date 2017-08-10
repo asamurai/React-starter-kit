@@ -10,28 +10,14 @@ const webpackConfig = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
+  devtool: 'eval-cheap-module-source-map',
   plugins: webpackEnvConfig.plugins,
   module:{
-    rules:[
-      {
-        test: (/\.sass$/ || /.\scss$/), 
-        use: ['style-loader','css-loader', 'sass-loader']
-      },
-      {
-        test: (/\.js$/ || /\.jsx$/),
-        exclude: /node_modules/,
-        use: 'babel-loader'
-      },
-      {
-        test: /\.json$/,
-        use: 'json-loader'
-      },
-			{
-				test: /\.(jpe?g|png|gif|svg|ico)$/i,
-				use: 'file-loader?name=[name].[ext]'
-			}
-    ]
+    rules: webpackEnvConfig.rules
   },
+	resolveLoader: {
+		moduleExtensions: ['-loader']
+	},
   devServer:{
     historyApiFallback: true,
     hot: true,

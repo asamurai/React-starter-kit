@@ -11,6 +11,25 @@ export default {
         'webpack/hot/only-dev-server',
         './src/index.js'
     ],
+    rules: [
+        {
+            test: (/\.(scss|sass)$/), 
+            use: ['style-loader','css-loader', 'sass-loader']
+        },
+        {
+            test: (/\.(js|jsx)$/),
+            exclude: /node_modules/,
+            use: 'babel-loader'
+        },
+        {
+            test: /\.json$/,
+            use: 'json-loader'
+        },
+        {
+            test: /\.(jpe?g|png|gif|svg|ico)$/i,
+            use: 'file-loader?name=[name].[ext]'
+        }
+    ],
     plugins: [
         new webpack.NoEmitOnErrorsPlugin(),
         new DirectoryNamedWebpackPlugin(),
