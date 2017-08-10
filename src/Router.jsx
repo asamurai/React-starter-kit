@@ -8,7 +8,7 @@ class Router extends Component {
             <BrowserRouter>
                 <Application/>
             </BrowserRouter>
-        )
+        );
     }
 }
 

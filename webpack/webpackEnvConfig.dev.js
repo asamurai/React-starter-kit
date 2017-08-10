@@ -13,6 +13,12 @@ export default {
     ],
     rules: [
         {
+            enforce: 'pre',
+            test: /\.(js|jsx)$/,
+            exclude: /node_modules/,
+            use: 'eslint-loader'
+        },
+        {
             test: (/\.(scss|sass)$/), 
             use: ['style-loader','css-loader', 'sass-loader']
         },

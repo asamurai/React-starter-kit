@@ -7,7 +7,7 @@ class Application extends Component {
             <div>
                 Hello world
             </div>
-        )
+        );
     }
 }
 
