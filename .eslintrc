@@ -7,8 +7,10 @@
 		"es6": true,
 		"jest": true
 	},
-	"ecmaFeatures": {
-		"jsx": true
+	"parserOptions":{
+		"ecmaFeatures":{
+			"modules": true
+		}
 	},
 	"globals": {
 		"$": false
