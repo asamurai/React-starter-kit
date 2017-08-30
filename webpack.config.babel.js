@@ -10,6 +10,9 @@ const webpackConfig = {
     path: path.resolve(__dirname, 'dist')
   },
   devtool: 'eval-cheap-module-source-map',
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
   plugins: webpackEnvConfig.plugins,
   module:{
     rules: webpackEnvConfig.rules
