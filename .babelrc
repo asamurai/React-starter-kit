@@ -6,8 +6,13 @@
 	    		"react-hmre"
 	    	],
 			"plugins": [
-				"react-hot-loader/babel"
+				"react-hot-loader/babel","transform-object-rest-spread"
 			]
-	   	}
+		},
+		"production":{
+			"plugins": [
+				"transform-object-rest-spread"
+			]			
+		}
 	}
 }
