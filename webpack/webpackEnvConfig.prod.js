@@ -1,21 +1,26 @@
-import path from 'path';
-import webpack from 'webpack';
-import DirectoryNamedWebpackPlugin from 'directory-named-webpack-plugin';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
+const path = require('path');
+const webpack = require('webpack');
+const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-export default {
+module.exports = {
     entry: [
         './src/index.js',
     ],
     rules: [
         {
-            test: /\.(scss|sass)$/,
-            exclude: [/node_modules/,/production/],
-            loader: ExtractTextPlugin.extract({
-                fallback: 'style',
-                use: ['css','sass']
-            })  
+            test: (/\.(scss|sass)$/), 
+            use: [
+                'style-loader',    
+                {
+                    loader: 'css-loader',
+                    options: {
+                        modules: true,
+                        sourceMap: true
+                    }
+                },
+                'sass-loader'
+            ]
         },
         {
             test: (/\.(js|jsx)$/),
@@ -39,7 +44,6 @@ export default {
         new webpack.NoEmitOnErrorsPlugin(),
         new DirectoryNamedWebpackPlugin(),
         new webpack.NamedModulesPlugin(),
-        new ExtractTextPlugin('style.css'),
         new HtmlWebpackPlugin({
             title: 'Project',
             template: path.resolve(__dirname, '../assets/views/index-template.ejs'),

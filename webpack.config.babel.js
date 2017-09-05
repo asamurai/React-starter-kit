@@ -1,13 +1,14 @@
-import path from 'path';
+const path = require('path');
 
-import config from './config';
-import webpackEnvConfig from './webpack';
+const config = require('./config');
+const webpackEnvConfig = require('./webpack');
 
 const webpackConfig = {
   entry: webpackEnvConfig.entry,
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/'
   },
   devtool: 'eval-cheap-module-source-map',
   resolve: {
@@ -19,18 +20,7 @@ const webpackConfig = {
   },
 	resolveLoader: {
 		moduleExtensions: ['-loader']
-	},
-  devServer:{
-    historyApiFallback: true,
-    hot: true,
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true,
-    port: config.devServer.port,
-    open: true,
-    openPage: '',
-    inline: true,
-    stats: 'minimal'
-  }
+	}
 };
 
 module.exports = webpackConfig;

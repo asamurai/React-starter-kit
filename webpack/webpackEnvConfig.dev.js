@@ -1,10 +1,10 @@
-import path from 'path';
-import webpack from 'webpack';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import DirectoryNamedWebpackPlugin from 'directory-named-webpack-plugin';
-import config from './../config';
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin');
+const config = require('./../config');
 
-export default {
+module.exports = {
     entry: [
         'react-hot-loader/patch',
         `webpack-dev-server/client?http://${config.devServer.host}:${config.devServer.port}`,
@@ -58,8 +58,7 @@ export default {
         new HtmlWebpackPlugin({
             title: 'Project',
             template: path.resolve(__dirname, '../assets/views/index-template.ejs'),
-            filename: 'index.html',
-            hash: true
+            filename: 'index.html'
         }),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('development')
