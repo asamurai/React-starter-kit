@@ -5,7 +5,7 @@ class Application extends Component {
     render () {
         return (
             <div>
-                Hello world
+                Hello worlds
             </div>
         );
     }
