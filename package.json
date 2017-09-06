@@ -23,6 +23,11 @@
   "engines": {
     "node": "7.10.1"
   },
+  "jest":{
+    "moduleNameMapper": {
+      "^.+\\.(css|less|scss|sass)$": "babel-jest"
+    }    
+  },
   "devDependencies": {
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
