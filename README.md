@@ -7,7 +7,7 @@ This boilerplate provide you with all dev equipment for easy [React](https://fac
   - Using [Redux](http://redux.js.org/)
   - Using [Webpack 2](https://webpack.js.org/)
   - Using [React-router-v4](https://reacttraining.com/react-router/web/guides/philosophy)
-  - Using [Jest](https://facebook.github.io/jest/) as a Test framework
+  - Using [Jest](https://facebook.github.io/jest/) and [Enzyme](http://airbnb.io/enzyme/) for testing
   - Updating every season
 
 # New Features!
