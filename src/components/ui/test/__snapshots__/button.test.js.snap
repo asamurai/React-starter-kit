@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button component test Button title renders correctly with props 1`] = `
+<div
+  className="button"
+  onClick={[Function]}
+>
+  subscribe
+</div>
+`;
