@@ -4,15 +4,22 @@ import thunk from 'redux-thunk';
 
 import rootReducer from './../reducers';
 
-export const configureStore = (initialState) => {
+export default (initialState) => {
 
     const logger = createLogger();
     const store = createStore(
         rootReducer,
         initialState,
-        applyMiddleware(thunk, logger)
+        applyMiddleware(
+            thunk,
+            logger
+        )
     );
+    if (module.hot) {
+        module.hot.accept('./../reducers', () =>
+            store.replaceReducer(require('./../reducers').default)
+        );
+    }
 
     return store;
 };
-
