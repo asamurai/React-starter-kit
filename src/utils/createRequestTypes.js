@@ -19,8 +19,10 @@ const ERROR = 'ERROR';
  * @return {object} object
  */
 
-export default (action) => {
+export const createRequestTypes = (action) => {
   const results = {};
   [REQUEST, SUCCESS, ERROR].forEach(type => results[type] = `${action}_${type}`);
   return results;
 };
+
+
