@@ -1,20 +1,14 @@
-import {createStore, applyMiddleware} from 'redux';
-import { createLogger } from 'redux-logger';
-import thunk from 'redux-thunk';
+let configureStoreEnvConfig = null;
 
-import rootReducer from './../reducers';
-
-const configureStore = initialState => {
-
-    const logger = createLogger();
-    const store = createStore(
-        rootReducer,
-        initialState,
-        applyMiddleware(thunk, logger)
-    );
-
-    return store;
-};
-
-export default configureStore;
-
+switch (process.env.NODE_ENV) {
+    case 'production':
+        configureStoreEnvConfig = require('./configureStore.prod.js');
+        break;
+    case 'development':
+    case 'test':
+    default:
+        configureStoreEnvConfig = require('./configureStore.dev.js');
+        break;
+}
+    
+module.exports = configureStoreEnvConfig;
