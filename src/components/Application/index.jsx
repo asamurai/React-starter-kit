@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import Main from './../../containers/Main';
+import Main from '../../containers/Main';
 
-import './../../../assets/style/index.sass';
+import '../../../assets/style/index.sass';
 
 class Application extends Component {
     render () {

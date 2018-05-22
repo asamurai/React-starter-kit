@@ -2,29 +2,20 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
-import { addCount, removeCount, clearCount } from './../../actions/count.js';
+import { addCount, removeCount, clearCount } from '../../actions/count';
 
-import { Button } from './../../components/ui';
+import { Button } from '../../components/ui';
 
 class Main extends Component {
     render () {
         const { loading, error, count } = this.props.counter;
+        
         return (
             <div>
-                <div>
-                    Counter: {count}
-                </div>
-                {loading &&
-                    <div>
-                        Loading ...
-                    </div>
-                }
-                {!loading && error && 
-                    <div>
-                        {error}
-                    </div>
-                }
-                {!loading &&
+                <div> Counter: {count} </div>
+                { loading && <div> Loading ... </div> }
+                { !loading && error && <div> {error} </div> }
+                { !loading &&
                     <div>
                         <Button
                             title="Add counter"

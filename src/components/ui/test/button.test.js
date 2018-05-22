@@ -2,14 +2,14 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-import { Button } from './../index.js';
+import { Button } from '../index.js';
 
 describe('Button component test', () => {
   it('Button title renders correctly with props', () => { 
     const dummyProps = {
       title: 'subscribe'
     };
-    const onClick = ()=>{console.log('lol');}
+    const onClick = () => { console.log('lol'); };
     const button = shallow(
       <Button
           title={dummyProps.title}

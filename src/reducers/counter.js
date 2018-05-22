@@ -2,7 +2,7 @@ import {
     COUNT_ADD,
     COUNT_REMOVE,
     COUNT_CLEAR
-} from './../constants';
+} from '../actions/count/actionTypes';
 
 const initialState = {
     loading: false,
