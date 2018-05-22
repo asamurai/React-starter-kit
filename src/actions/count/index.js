@@ -1,7 +1,7 @@
 import {
-    COUNT_ADD,
-    COUNT_REMOVE,
-    COUNT_CLEAR
+  COUNT_ADD,
+  COUNT_REMOVE,
+  COUNT_CLEAR
 } from './actionTypes';
 
 /**
@@ -10,10 +10,10 @@ import {
  * 
  */
 let wait = () => new Promise((resolve, reject) => {
-    const ms = Math.random()*1000;
-    setTimeout(()=>{
-        return Math.random()*1000 + 200 > 500 ? resolve('Success') : reject('Failed');
-    }, ms);
+  const ms = Math.random()*1000;
+  setTimeout(()=>{
+    return Math.random()*1000 + 200 > 500 ? resolve('Success') : reject('Failed');
+  }, ms);
 });
 
 export const countAddRequest = () => ({ type: COUNT_ADD.REQUEST });
@@ -35,31 +35,31 @@ export const countClearSuccess = () => ({ type: COUNT_CLEAR.SUCCESS });
 export const countClearError = (error) => ({ type: COUNT_CLEAR.ERROR, error });
 
 export const addCount = () => async dispatch => {
-    try {
-        await dispatch(countAddRequest()); 
-        await wait();
-        await dispatch(countAddSuccess());        
-    } catch (error) {
-        await dispatch(countAddError(error));       
-    }
+  try {
+    await dispatch(countAddRequest()); 
+    await wait();
+    await dispatch(countAddSuccess());        
+  } catch (error) {
+    await dispatch(countAddError(error));       
+  }
 };
 export const removeCount = () => async dispatch => {
-    try {
-        await dispatch(countRemoveRequest()); 
-        await wait();
-        await dispatch(countRemoveSuccess());        
-    } catch (error) {
-        await dispatch(countRemoveError(error));       
-    }
+  try {
+    await dispatch(countRemoveRequest()); 
+    await wait();
+    await dispatch(countRemoveSuccess());        
+  } catch (error) {
+    await dispatch(countRemoveError(error));       
+  }
 };
 export const clearCount = () => async dispatch => {
-    try {
-        await dispatch(countClearRequest()); 
-        await wait();
-        await dispatch(countClearSuccess());        
-    } catch (error) {
-        await dispatch(countClearError(error));       
-    }
+  try {
+    await dispatch(countClearRequest()); 
+    await wait();
+    await dispatch(countClearSuccess());        
+  } catch (error) {
+    await dispatch(countClearError(error));       
+  }
 };
 
 

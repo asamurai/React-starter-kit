@@ -26,5 +26,3 @@ const createAsyncTypes = action => {
 };
 
 export default createAsyncTypes;
-
-

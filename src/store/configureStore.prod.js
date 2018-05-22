@@ -5,13 +5,13 @@ import rootReducer from '../reducers';
 
 const configureStore = initialState => {
 
-    const store = createStore(
-        rootReducer,
-        initialState,
-        applyMiddleware(thunk)
-    );
+  const store = createStore(
+    rootReducer,
+    initialState,
+    applyMiddleware(thunk)
+  );
 
-    return store;
+  return store;
 };
 
 export default configureStore;

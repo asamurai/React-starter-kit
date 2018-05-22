@@ -5,27 +5,27 @@ import thunk from 'redux-thunk';
 import rootReducer from '../reducers';
 
 const configureStore = initialState => {
-    const logger = createLogger();
-    
-    const enhancer = compose(
-        applyMiddleware(thunk, logger),
-        window.devToolsExtension ? window.devToolsExtension() : f => f
-    );
+  const logger = createLogger();
+  
+  const enhancer = compose(
+    applyMiddleware(thunk, logger),
+    window.devToolsExtension ? window.devToolsExtension() : f => f
+  );
 
-    const store = createStore(
-        rootReducer,
-        initialState,
-        enhancer
-    );
+  const store = createStore(
+    rootReducer,
+    initialState,
+    enhancer
+  );
 
-    if (module.hot) {
-        module.hot.accept('../reducers', () => {
-            const nextRootReducer = require('../reducers').default;
-            store.replaceReducer(nextRootReducer);
-        });
-    }
+  if (module.hot) {
+    module.hot.accept('../reducers', () => {
+      const nextRootReducer = require('../reducers').default;
+      store.replaceReducer(nextRootReducer);
+    });
+  }
 
-    return store;
+  return store;
 };
 
 export default configureStore;

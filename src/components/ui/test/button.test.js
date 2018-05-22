@@ -12,8 +12,8 @@ describe('Button component test', () => {
     const onClick = () => { console.log('lol'); };
     const button = shallow(
       <Button
-          title={dummyProps.title}
-          onClick={onClick}
+        title={dummyProps.title}
+        onClick={onClick}
       />
     );
     const tree = toJson(button);
