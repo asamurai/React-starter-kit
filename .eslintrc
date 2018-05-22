@@ -17,13 +17,13 @@
 	},
 	"plugins": ["react"],
 	"rules": {
-		"eol-last": 1, //end of line
-		"no-console": 0, //usage of console for debagging,
-		"no-var": 2, //disable var 
+		"eol-last": 1,
+		"no-console": 0,
+		"no-var": 2,
 		"semi": 1,
 		"no-else-return": 2,
 		"no-mixed-spaces-and-tabs": 1,
-		"no-unreachable": 2, //specially for reducer
+		"no-unreachable": 2,
 		"no-multi-spaces": 1,
 		"no-throw-literal": 2,
 		"no-underscore-dangle": 0,
