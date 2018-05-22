@@ -4,8 +4,9 @@
 
 This boilerplate provide you with all dev equipment for easy [React](https://facebook.github.io/react/) coding.
 
+  - Using [Immutable](https://facebook.github.io/immutable-js/)
   - Using [Redux](http://redux.js.org/)
-  - Using [Redux-thunk](https://github.com/gaearon/redux-thunk/blob/master/README.md)
+  - Using [Redux-thunk](https://github.com/gaearon/redux-thunk/blob/master/README.md) 
   - Using [Webpack 3](https://webpack.js.org/)
   - Using [React-router-v4](https://reacttraining.com/react-router/web/guides/philosophy)
   - Using [Jest](https://facebook.github.io/jest/) and [Enzyme](http://airbnb.io/enzyme/) for testing
@@ -15,7 +16,7 @@ This boilerplate provide you with all dev equipment for easy [React](https://fac
 
   - [Webpack 3](https://webpack.js.org/)
   - [React-router-v4](https://reacttraining.com/react-router/web/guides/philosophy)
-  - React updated to 16.0.0 v. 
+  - React updated to 16.3.2 v. 
 
 You can also:
   - Use another middlewares for Redux and tools for async requests besides redux-thunk
