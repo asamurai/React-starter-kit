@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 
-import Providers from './Providers.jsx';
+import Providers from './providers.jsx';
 
 const root = document.getElementById('root');
 
