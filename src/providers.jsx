@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import Main from './containers/main';
 
-import configureStore from './store';
+import configureStore from './state/store';
 
 const store = configureStore();
 

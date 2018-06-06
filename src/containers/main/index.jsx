@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
 import Main from '../../components/main';
-import { addCount, removeCount, clearCount } from '../../actions/count';
+import { addCount, removeCount, clearCount } from '../../state/actions/count';
 
 function mapStateToProps(state) {
   return {
