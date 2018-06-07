@@ -4,6 +4,7 @@
 
 This boilerplate provide you with all dev equipment for easy [React](https://facebook.github.io/react/) coding.
 
+  - Using [Styled-components](https://www.styled-components.com/)
   - Using [Immutable](https://facebook.github.io/immutable-js/)
   - Using [Redux](http://redux.js.org/)
   - Using [Redux-thunk](https://github.com/gaearon/redux-thunk/blob/master/README.md) 
