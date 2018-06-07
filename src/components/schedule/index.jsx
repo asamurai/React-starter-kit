@@ -7,9 +7,9 @@ class Schedule extends PureComponent {
     return (
       <div>
         <h1>Counter Example</h1>
-        <div> Counter: {count} </div>
         { loading && <div> Loading ... </div> }
         { !loading && error && <div> {error} </div> }
+        { !loading && !error && <div> Counter: {count} </div> }
       </div>
     );
   }

@@ -1,1 +1,1 @@
-export { default as createRequestTypes } from './createRequestTypes';
+export { default as api } from './api';
