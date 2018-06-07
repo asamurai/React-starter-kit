@@ -19,10 +19,9 @@ const ERROR = 'ERROR';
  * @return {object} object
  */
 
-const createAsyncTypes = action => {
-  const results = {};
-  [REQUEST, SUCCESS, ERROR].forEach(type => results[type] = `${action}_${type}`);
-  return results;
-};
+const createAsyncTypes = (action) => [REQUEST, SUCCESS, ERROR].reduce((prevState, type) => ({
+  [`${type}`]: `${action}_${type}`,
+  ...prevState
+}), {});
 
 export default createAsyncTypes;
