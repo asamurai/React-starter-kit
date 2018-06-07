@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-class Schedule extends Component {
+class Schedule extends PureComponent {
   render () {
     const { loading, error, count } = this.props;
     return (

@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './index.sass';
 
-class Button extends Component {
+class Button extends PureComponent {
   render () {
     const { title, disabled, onClick } = this.props;
     return (
