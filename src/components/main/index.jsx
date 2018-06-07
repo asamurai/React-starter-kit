@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { Button } from '../../components/common/ui';
 import Schedule from '../schedule';
 
-import '../../../assets/style/index.sass';
+// import '../../../assets/style/index.sass';
 
 class Main extends PureComponent {
   render () {

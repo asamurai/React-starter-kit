@@ -1,32 +1,31 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './index.sass';
+import { Button } from './styles';
 
-class Button extends PureComponent {
+class ButtonComponent extends PureComponent {
   render () {
     const { title, disabled, onClick } = this.props;
     return (
-      <div
-        className={styles.button}
+      <Button
         onClick={onClick}
         disabled={disabled}
       >
         {title}
-      </div>
+      </Button>
     );
   }
 }
 
-Button.propTypes = {
+ButtonComponent.propTypes = {
   title: PropTypes.string.isRequired,
   disabled: PropTypes.bool,
   onClick: PropTypes.func
 };
 
-Button.defaultProps = {
+ButtonComponent.defaultProps = {
   disabled: false
 };
 
-export default Button;
+export default ButtonComponent;
 
