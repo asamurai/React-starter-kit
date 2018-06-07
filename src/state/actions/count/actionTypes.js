@@ -1,4 +1,4 @@
-import createAsyncTypes from '../../utils/createAsyncTypes';
+import createAsyncTypes from '../../createAsyncTypes';
 
 export const COUNT_ADD = createAsyncTypes('COUNT_ADD');
 export const COUNT_REMOVE = createAsyncTypes('COUNT_REMOVE');

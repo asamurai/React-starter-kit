@@ -9,7 +9,7 @@ describe('Button component test', () => {
     const dummyProps = {
       title: 'subscribe'
     };
-    const onClick = () => { console.log('lol'); };
+    function onClick() { console.log('lol'); }
     const button = shallow(
       <Button
         title={dummyProps.title}

@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 
-import Application from './components/Application';
+import Main from './containers/main';
 
-import configureStore from './store';
+import configureStore from './state/store';
 
 const store = configureStore();
 
@@ -13,7 +13,7 @@ class Providers extends Component {
     return (
       <Provider store={store}>
         <BrowserRouter>
-          <Application/>
+          <Main/>
         </BrowserRouter>
       </Provider>
     );
