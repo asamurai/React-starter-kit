@@ -2,12 +2,12 @@ let webpackEnvConfig = null;
 
 switch (process.env.NODE_ENV) {
     case 'production':
-        webpackEnvConfig = require('./webpackEnvConfig.prod.js');
+        webpackEnvConfig = require('./webpack.config.prod');
         break;
     case 'development':
     case 'test':
     default:
-        webpackEnvConfig = require('./webpackEnvConfig.dev.js');
+        webpackEnvConfig = require('./webpack.config.dev');
         break;
 }
     
