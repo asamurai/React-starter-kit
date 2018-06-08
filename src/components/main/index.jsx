@@ -6,7 +6,7 @@ import Schedule from '../schedule';
 
 class Main extends PureComponent {
   render () {
-    const { loading, error, count } = this.props.counter.toJS();
+    const { loading, error, count } = this.props.counter;
     const { addCount, removeCount, clearCount } = this.props;
       
     return (

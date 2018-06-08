@@ -4,7 +4,7 @@ import {bindActionCreators} from 'redux';
 import Main from '../../components/main';
 import { addCount, removeCount, clearCount } from '../../state/actions/count';
 
-const mapStateToProps = (state) => ({ counter: state.counter });
+const mapStateToProps = (state) => ({ counter: state.toJS().counter });
 
 const mapDispatchToProps = (dispatch) => ({
   addCount: bindActionCreators(addCount, dispatch),

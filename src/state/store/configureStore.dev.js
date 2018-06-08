@@ -1,12 +1,14 @@
 import {createStore, applyMiddleware, compose} from 'redux';
 import { createLogger } from 'redux-logger';
+import { fromJS } from 'immutable';
 import thunk from 'redux-thunk';
 
 import rootReducer from '../reducers';
 
+
 const configureStore = initialState => {
   const logger = createLogger();
-  
+
   const enhancer = compose(
     applyMiddleware(thunk, logger),
     window.devToolsExtension ? window.devToolsExtension() : f => f
@@ -14,7 +16,7 @@ const configureStore = initialState => {
 
   const store = createStore(
     rootReducer,
-    initialState,
+    fromJS({ ...initialState }),
     enhancer
   );
 
