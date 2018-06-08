@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
-import '../assets/style/globalStyles';
 
 import Providers from './providers';
+
+import '../assets/style/globalStyles';
 
 const root = document.getElementById('root');
 

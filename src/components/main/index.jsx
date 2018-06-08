@@ -2,11 +2,9 @@ import React, { PureComponent } from 'react';
 import { Button } from '../../components/common/ui';
 import Schedule from '../schedule';
 
-// import '../../../assets/style/index.sass';
-
 class Main extends PureComponent {
   render () {
-    const { loading, error, count } = this.props.counter.toJS();
+    const { loading, error, count } = this.props.counter;
     const { addCount, removeCount, clearCount } = this.props;
       
     return (

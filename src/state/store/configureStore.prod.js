@@ -1,13 +1,14 @@
 import {createStore, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
+import { Map } from 'immutable';
 
 import rootReducer from '../reducers';
 
-const configureStore = initialState => {
+const configureStore = (initialState) => {
 
   const store = createStore(
     rootReducer,
-    initialState,
+    Map({ ...initialState }),
     applyMiddleware(thunk)
   );
 
