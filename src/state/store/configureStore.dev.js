@@ -1,7 +1,7 @@
 import {createStore, applyMiddleware, compose} from 'redux';
 import { createLogger } from 'redux-logger';
-import { Map } from 'immutable';
 import thunk from 'redux-thunk';
+import { Map } from 'immutable';
 
 import rootReducer from '../reducers';
 
