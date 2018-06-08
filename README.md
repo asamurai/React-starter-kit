@@ -1,9 +1,10 @@
-# React boilerplate
+# React starter kit
 
-![N|Solid](https://geeks.wego.com/content/images/2015/12/react-webpack-1.png)
+![N|Solid](https://www.filepicker.io/api/file/Uv013LnwRzm2HXHBk9iQ)
 
-This boilerplate provide you with all dev equipment for easy [React](https://facebook.github.io/react/) coding.
+This starter kit provide you with all dev equipment for easy [React](https://facebook.github.io/react/) starting.
 
+  - Using [Redux-form](https://redux-form.com/)
   - Using [Styled-components](https://www.styled-components.com/)
   - Using [Immutable](https://facebook.github.io/immutable-js/)
   - Using [Redux](http://redux.js.org/)
@@ -15,18 +16,19 @@ This boilerplate provide you with all dev equipment for easy [React](https://fac
 
 # New Features!
 
-  - [Webpack 3](https://webpack.js.org/)
-  - [React-router-v4](https://reacttraining.com/react-router/web/guides/philosophy)
   - React updated to 16.3.2 v. 
+  - Add Immutable
+  - Add Styled-components
+  - Add Redux-form
 
 You can also:
   - Use another middlewares for Redux and tools for async requests besides redux-thunk
-  - Edit or configure your own [eslintrc](https://github.com/Xart044/React-boilerplate/blob/master/.eslintrc)
-  - Boilerplate is highly easy and flexible
+  - Edit or configure your own [eslintrc](https://github.com/Xart044/React-starter-kit/blob/master/.eslintrc)
+  - Starter kit is highly easy and flexible
 ---
 ### Installation
 
-Boilerpate requires [Node.js](https://nodejs.org/) and [NPM](https://www.npmjs.com/)/[Yarn](https://yarnpkg.com/) to run.
+Starter kit requires [Node.js](https://nodejs.org/) and [NPM](https://www.npmjs.com/)/[Yarn](https://yarnpkg.com/) to run.
 
 Install the dependencies and devDependencies and start the server.
 

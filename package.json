@@ -1,7 +1,7 @@
 {
-  "name": "react-boilerplate",
-  "version": "2.0.0",
-  "description": "react boilerplate with cutting-edge features",
+  "name": "react-starter-kit",
+  "version": "2.3.0",
+  "description": "react starter kit with cutting-edge features",
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=test jest",
@@ -13,8 +13,10 @@
   },
   "keywords": [
     "react",
+    "redux",
     "webpack",
-    "boilerplate",
+    "starter-kit",
+    "build-tools",
     "js",
     "frontend"
   ],
