@@ -11,14 +11,14 @@ const root = document.getElementById('root');
 const render = (Providers) => {
 	ReactDOM.render(
 		<AppContainer>
-			<Providers/>
+			<Providers />
 		</AppContainer>,
 		root
 	);
 };
 render(Providers);
 
-if(module.hot){
+if (module.hot) {
 	module.hot.accept('./providers.jsx', () => {
 		render(root);
 	});
