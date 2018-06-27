@@ -27,6 +27,7 @@
     "node": "10.0.0"
   },
   "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/src/utils/testing/setup.js",
     "moduleNameMapper": {
       "^.+\\.(css|less|scss|sass)$": "identity-obj-proxy"
     }
