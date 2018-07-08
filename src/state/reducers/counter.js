@@ -17,17 +17,17 @@ export default function (state = initialState, action) {
     case COUNT_ADD.REQUEST:
     case COUNT_REMOVE.REQUEST:
     case COUNT_CLEAR.REQUEST:
-      return state.merge(Map({ error: null, loading: true }));
+      return state.set('error', null).set('loading', true);
     case COUNT_ADD.SUCCESS:
-      return state.merge(Map({ error: null, loading: false, count: state.get('count') + 1 }));
+      return state.set('error', null).set('loading', false).set('count', state.get('count') + 1);
     case COUNT_REMOVE.SUCCESS:
-      return state.merge(Map({ error: null, loading: false, count: state.get('count') - 1 }));
+      return state.set('error', null).set('loading', false).set('count', state.get('count') - 1);
     case COUNT_CLEAR.SUCCESS:
-      return state.merge(Map({ error: null, loading: false, count: 0 }));
+      return state.set('error', null).set('loading', false).set('count', 0);
     case COUNT_ADD.ERROR:
     case COUNT_REMOVE.ERROR:
     case COUNT_CLEAR.ERROR:
-      return state.merge(Map({ error: action.error, loading: false }));
+      return state.set('error', action.error).set('loading', false);
     default:
       return state;
   }
